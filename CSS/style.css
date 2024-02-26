@@ -14,12 +14,13 @@
   box-shadow: none !important;
   border: 0 !important;
 }
+
 .hamburger {
   transition: transform 300ms ease;
 }
 
 .nav-item {
-  padding-left: 5px !important;
+  padding: 5px !important;
 }
 
 .btn-login {
@@ -41,15 +42,9 @@
 }
 
 .fa {
-  font-size: 16px !important;
   font-family: "Font Awesome 5 Free", sans-serif !important;
-  background: transparent !important;
+  background: #2c2c2c;
   border: 1px solid #929294 !important;
   color: #e29d35 !important;
   font-size: 24px !important;
-  padding: 6px !important;
-
-  &:hover {
-    background: #2c2c2c !important;
-  }
 }

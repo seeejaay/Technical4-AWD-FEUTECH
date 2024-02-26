@@ -1,60 +1,110 @@
-//hamburger ID
 const burgerButton = document.getElementById("burgerButton");
 const burgerIcon = document.getElementById("_hamburger");
 
-//Button as container for changTheme
-const changeThemeConS = document.getElementById("_changeThemeConS");
-const changeThemeConL = document.getElementById("_changeThemeConL");
+const newButtonSmall = document.getElementById("_changeThemeConS");
+const newButtonLarge = document.getElementById("_changeThemeConL");
 
-//changeTheme Icon
 const changeThemeS = document.getElementById("_changeThemeS");
 const changeThemeL = document.getElementById("_changeThemeL");
 const navColor = document.getElementById("_navColor");
 const btnLogin = document.getElementById("_btnLogin");
 
-//rotate hamburger when clicked and change to X
 burgerButton.addEventListener("click", () => {
-  burgerIcon.classList.toggle("fa-bars");
-  burgerIcon.classList.toggle("fa-times");
-  burgerIcon.style.transform = burgerIcon.classList.contains("fa-times")
-    ? "rotate(360deg)"
-    : "rotate(0deg)";
+  if (burgerIcon.classList.contains("fa-bars")) {
+    burgerIcon.classList.remove("fa-bars");
+    burgerIcon.classList.add("fa-times");
+    burgerIcon.style.transform = "rotate(360deg)";
+  } else {
+    burgerIcon.classList.remove("fa-times");
+    burgerIcon.classList.add("fa-bars");
+    burgerIcon.style.transform = "rotate(0deg)";
+  }
 });
 
-//hides changeTheme S and L based on scren size
 const updateButtonVisibility = () => {
   const win = window;
 
-  changeThemeConS.style.display = win.innerWidth >= 992 ? "none" : "block";
-  changeThemeConL.style.display = win.innerWidth >= 992 ? "block" : "none";
+  if (win.innerWidth >= 992) {
+    newButtonSmall.style.display = "none";
+    newButtonLarge.style.display = "block";
+  } else {
+    newButtonSmall.style.display = "block";
+    newButtonLarge.style.display = "none";
+  }
 };
 
 window.addEventListener("resize", updateButtonVisibility);
 updateButtonVisibility();
 
-/*adds removes fa-moon, fa-sun and turns into dark or light
- mode accordingly*/
-const toggleTheme = (event) => {
-  const target = event.target;
-  changeThemeS.classList.toggle("fa-moon");
-  changeThemeS.classList.toggle("fa-sun");
-  changeThemeL.classList.toggle("fa-moon");
-  changeThemeL.classList.toggle("fa-sun");
-  document.body.classList.toggle("bg-dark");
-  navColor.classList.toggle("bg-light");
-  navColor.classList.toggle("bg-dark");
-  navColor.classList.toggle("navbar-light");
-  navColor.classList.toggle("navbar-dark");
-  btnLogin.style.color = target.classList.contains("fa-moon")
-    ? "#000"
-    : "#d8d6d6";
-  changeThemeS.style.transform = target.classList.contains("fa-moon")
-    ? "rotate(360deg)"
-    : "rotate(0deg)";
-  changeThemeL.style.transform = changeThemeL.classList.contains("fa-moon")
-    ? "rotate(0deg)"
-    : "rotate(360deg)";
-};
+newButtonSmall.addEventListener("click", () => {
+  if (changeThemeS.classList.contains("fa-moon")) {
+    changeThemeS.classList.remove("fa-moon");
+    changeThemeS.classList.add("fa-sun");
+    navColor.classList.remove("bg-light");
+    navColor.classList.add("bg-dark");
+    navColor.classList.remove("navbar-light");
+    navColor.classList.add("navbar-dark");
+    document.body.style.backgroundColor = "#1F2327";
+    document.body.style.color = "white";
+    btnLogin.style.color = "#d8d6d6";
+    changeThemeS.style.transform = changeThemeS.classList.contains("fa-moon")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+    changeThemeS.style.transform = changeThemeS.classList.contains("fa-sun")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+  } else {
+    changeThemeS.classList.remove("fa-sun");
+    changeThemeS.classList.add("fa-moon");
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    navColor.classList.remove("bg-dark");
+    navColor.classList.add("bg-light");
+    navColor.classList.remove("navbar-dark");
+    navColor.classList.add("navbar-light");
+    changeThemeS.style.transform = changeThemeS.classList.contains("fa-moon")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+    changeThemeS.style.transform = changeThemeS.classList.contains("fa-sun")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+  }
+});
 
-changeThemeConS.addEventListener("click", toggleTheme);
-changeThemeConL.addEventListener("click", toggleTheme);
+newButtonLarge.addEventListener("click", () => {
+  if (changeThemeL.classList.contains("fa-moon")) {
+    changeThemeL.classList.remove("fa-moon");
+    changeThemeL.classList.add("fa-sun");
+    document.body.style.backgroundColor = "#1F2327";
+    document.body.style.color = "white";
+    navColor.classList.remove("bg-light");
+    navColor.classList.add("bg-dark");
+    navColor.classList.remove("navbar-light");
+    navColor.classList.add("navbar-dark");
+    btnLogin.style.color = "#d8d6d6";
+
+    changeThemeL.style.transform = changeThemeL.classList.contains("fa-moon")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+    changeThemeL.style.transform = changeThemeL.classList.contains("fa-sun")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+  } else {
+    changeThemeL.classList.remove("fa-sun");
+    changeThemeL.classList.add("fa-moon");
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    navColor.classList.remove("bg-dark");
+    navColor.classList.add("bg-light");
+    navColor.classList.remove("navbar-dark");
+    navColor.classList.add("navbar-light");
+    btnLogin.style.color = "#000";
+
+    changeThemeL.style.transform = changeThemeL.classList.contains("fa-moon")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+    changeThemeL.style.transform = changeThemeL.classList.contains("fa-sum")
+      ? "rotate(360deg)"
+      : "rotate(0deg)";
+  }
+});
