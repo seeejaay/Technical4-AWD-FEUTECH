@@ -34,7 +34,8 @@ updateButtonVisibility();
 
 /*adds removes fa-moon, fa-sun and turns into dark or light
  mode accordingly*/
-const toggleTheme = () => {
+const toggleTheme = (event) => {
+  const target = event.target;
   changeThemeS.classList.toggle("fa-moon");
   changeThemeS.classList.toggle("fa-sun");
   changeThemeL.classList.toggle("fa-moon");
@@ -44,10 +45,10 @@ const toggleTheme = () => {
   navColor.classList.toggle("bg-dark");
   navColor.classList.toggle("navbar-light");
   navColor.classList.toggle("navbar-dark");
-  btnLogin.style.color = btnLogin.classList.contains("fa-moon")
+  btnLogin.style.color = target.classList.contains("fa-moon")
     ? "#000"
     : "#d8d6d6";
-  changeThemeS.style.transform = changeThemeS.classList.contains("fa-moon")
+  changeThemeS.style.transform = target.classList.contains("fa-moon")
     ? "rotate(360deg)"
     : "rotate(0deg)";
   changeThemeL.style.transform = changeThemeL.classList.contains("fa-moon")
