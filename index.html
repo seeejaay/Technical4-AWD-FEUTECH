@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
     <!--CSS BOOTSTRAP-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -22,12 +22,11 @@
   </head>
   <body class="">
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-light shadow p-2"
-        id="_navColor"
-      >
+      <nav class="navbar navbar-expand-lg shadow p-2" id="_navColor">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#"
+            ><img class="img-logo-size" src="./assets/images/logo.png" alt=""
+          /></a>
 
           <div class="d-flex">
             <button
@@ -78,10 +77,69 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid bg-dark">
-      <span class="text-light">Hello</span>
+    <main
+      class="container-fluid d-flex flex-column justify-content-center w-100 container-1 position-relative"
+    >
+      <header
+        class="d-flex flex-column align-items-center container-fluid justify-content-center container-2"
+      >
+        <img src="./assets/images/bg.jpg" class="img-fluid img-style" alt="" />
+      </header>
+      <div class="container-fluid container">
+        <h1
+          class="text-center text position-absolute top-50 start-50 translate-middle"
+        >
+          Endless Movies, Shows, and More <br />
+        </h1>
+        <span class="start-50 translate-middle span-style"
+          >Choose Your Plan To Get Started</span
+        >
+      </div>
     </main>
-    <script src="./JS/script.js"></script>
+
+    <section class="container-fluid container mt-5">
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Watch Out Basic</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Watch Out Standard</h5>
+            <p class="card-text">
+              This card has supporting text below as a natural lead-in to
+              additional content.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Watch Out Premium</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This card has even longer content
+              than the first to show that equal height action.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/JS/script.js"></script>
 
     <!--JS BOOTSTRAP-->
     <script

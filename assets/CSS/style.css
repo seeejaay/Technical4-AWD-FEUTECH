@@ -5,6 +5,14 @@
   box-sizing: border-box !important;
   transition: 300ms ease !important;
   font-family: "Poppins", sans-serif;
+  --lightviolet: #6662f7;
+  --lightblue: #5271ff;
+}
+.navbar {
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  background-color: #fff;
 }
 .navbar-toggler,
 .navbar-toggler:focus,
@@ -47,4 +55,58 @@
   border: 1px solid #929294 !important;
   color: #e29d35 !important;
   font-size: 24px !important;
+}
+
+.img-logo-size {
+  width: 200px !important;
+  height: auto;
+}
+
+.img-style {
+  filter: brightness(0.3);
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 30rem !important;
+}
+
+.text {
+  color: #fff !important;
+  font-size: clamp(1.5rem, 4vw, 2rem) !important;
+  font-weight: 700 !important;
+  text-transform: capitalize !important;
+}
+
+.container-1 {
+  padding: 0 !important;
+}
+
+.container-2 {
+  width: 100%;
+  padding: 0 !important;
+}
+
+.span-style {
+  position: absolute !important;
+  top: 80% !important;
+  color: #fff !important;
+  text-align: center;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 700 !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px !important;
+}
+
+.card-group {
+  gap: 30px !important;
+}
+
+@media (max-width: 572px) {
+  .text,
+  .span-style {
+    width: 100%;
+    max-width: 300px;
+  }
 }

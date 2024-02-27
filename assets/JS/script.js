@@ -62,6 +62,7 @@ newButtonSmall.addEventListener("click", () => {
     navColor.classList.add("bg-light");
     navColor.classList.remove("navbar-dark");
     navColor.classList.add("navbar-light");
+    btnLogin.style.color = "#000";
     changeThemeS.style.transform = changeThemeS.classList.contains("fa-moon")
       ? "rotate(360deg)"
       : "rotate(0deg)";
