@@ -66,7 +66,7 @@
   filter: brightness(0.3);
   width: 100% !important;
   object-fit: cover !important;
-  height: 30rem !important;
+  height: 25rem !important;
 }
 
 .text {
@@ -74,6 +74,7 @@
   font-size: clamp(1.5rem, 4vw, 2rem) !important;
   font-weight: 700 !important;
   text-transform: capitalize !important;
+  width: clamp(300px, 60vw, 2000px) !important;
 }
 
 .container-1 {
@@ -90,8 +91,9 @@
   top: 80% !important;
   color: #fff !important;
   text-align: center;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   font-weight: 700 !important;
+  width: clamp(300px, 60vw, 2000px) !important;
 }
 
 .container {
@@ -102,11 +104,83 @@
 .card-group {
   gap: 30px !important;
 }
+.card {
+  border-radius: 16px !important;
+  box-shadow: 0px 0px 4px 3px rgba(97, 97, 97, 0.68) !important;
+  &.card-dark {
+    box-shadow: 0px 0px 4px 3px rgba(102, 98, 247, 0.68) !important;
+    background: #1f2327;
+  }
 
-@media (max-width: 572px) {
-  .text,
-  .span-style {
-    width: 100%;
-    max-width: 300px;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+.card-title {
+  width: 100% !important;
+  height: 100px;
+  background: linear-gradient(90deg, #2cda9d 0%, #6662f7 100%);
+  border-radius: 10px !important;
+}
+.f-size {
+  font-size: clamp(16px, 2vw, 20px) !important;
+  color: #fff !important;
+  &.f-size-dark {
+    color: #000 !important;
+  }
+}
+.l-item {
+  border: 0 !important;
+  color: #929294 !important;
+  background: #fff !important;
+  &.list-group-item-dark {
+    background: #1f2327 !important;
+
+    span {
+      color: #fff !important;
+    }
+
+    .btn-style {
+      color: #fff;
+
+      &:hover {
+        background: #6662f7 !important;
+      }
+    }
+  }
+
+  span {
+    color: #000 !important;
+  }
+
+  .btn-style {
+    border: 1px solid #6662f7 !important;
+
+    &:hover {
+      background: #6662f7 !important;
+      color: #fff !important;
+    }
+  }
+}
+
+.footer {
+  background: #24292e !important;
+  color: #fff !important;
+  padding: 0 !important;
+}
+
+.img-size {
+  width: 200px !important;
+  height: auto !important;
+}
+
+.l-item-f {
+  border: 0 !important;
+  background: #24292e !important;
+  color: #fff !important;
+
+  &:hover {
+    cursor: pointer;
+    color: #b8b8bb !important;
   }
 }
